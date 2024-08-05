@@ -1,9 +1,8 @@
-# Dummy code for testing sensitive information exposure
-# This code is intended for testing purposes only and should not be used in a production environment.
-
-# DISCLAIMER: All data provided below are randomly generated and any conflicts with actual data is coincidental
-# Do not use this in production
-
+# DISCLAIMER:
+# This script is for testing purposes only. It contains dummy sensitive information
+# and is not intended for real use. All "sensitive data" included in this script are
+# fake and should not be used in any actual environment. This script is intended to 
+# test detection capabilities for sensitive information on a GitHub repository.
 
 import requests
 import smtplib
@@ -52,6 +51,12 @@ Gp9vblMeMUElCuLdbsXArC7GAaObFZwz7mr1Ho8GZaGn+wGvlGDkzjcfr6ZWMCpB
 # Dummy API endpoint
 api_endpoint = "https://api.bsp.com.pg/v1/data"
 
+# Dummy JWT
+jwt_token = "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiAiMTIzNDU2Nzg5MCIsICJuYW1lIjogIkpvaG4gRG9lIiwgImlhdCI6IDE1MTYyMzkwMjJ9.8f8gI4wH6i9mEG7-2ILWcFze_o7oB9vF9a9YX0ilZhk"
+
+# Dummy OAuth token
+oauth_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTYwNTE2MjAwLCJleHBpcmFwIjoxNTYwNTE5ODAwfQ.Wy35kNGS1u0Yx1kWZqP_S0p-ylmLJ1hqlANh2G0vdo8"
+
 # Dummy function to access sensitive data
 def access_sensitive_data():
     response = requests.get(api_endpoint, headers={"Authorization": f"Bearer {api_key_1}"})
@@ -71,6 +76,16 @@ def connect_to_email():
     except Exception as e:
         print(f"Failed to connect to email: {e}")
 
+# Dummy function to simulate user actions
+def user_action():
+    print(f"User email: {email_address}")
+    # Example of using the user's email in a fake API request
+    response = requests.post(api_endpoint, json={"email": email_address, "action": "test"})
+    if response.status_code == 200:
+        print("User action successful")
+    else:
+        print("User action failed")
+
 # Output dummy sensitive information
 print("Dummy sensitive information:")
 print("API Key 1:", api_key_1)
@@ -84,7 +99,10 @@ print("Email Address:", email_address)
 print("Email Password:", email_password)
 print("SSH Private Key:", ssh_private_key)
 print("SSL Private Key:", ssl_private_key)
+print("JWT Token:", jwt_token)
+print("OAuth Token:", oauth_token)
 
 # Test the dummy functions
 access_sensitive_data()
 connect_to_email()
+user_action()
