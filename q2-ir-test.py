@@ -14,7 +14,7 @@ admin_password = "Adm1nP@ss!"
 credit_card_number = "4111111111111111"
 
 # Dummy email address
-email_address = "zemo@bsp.com.pg"
+email_address = "fkevengu@bsp.com.pg"
 email_password = "emailP@ss!"
 
 # Dummy SSH private key
