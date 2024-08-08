@@ -7,19 +7,8 @@
 import requests
 import smtplib
 
-# Dummy API keys
-api_key_1 = "1234567890abcdef1234567890abcdef"
-api_key_2 = "abcdef1234567890abcdef1234567890"
-
 # Dummy passwords
-db_password = "P@ssw0rd!"
 admin_password = "Adm1nP@ss!"
-
-# Dummy JWT secret
-jwt_secret = "supersecretkey"
-
-# Dummy database connection string
-db_connection_string = "postgresql://username:password@localhost:5432/mydatabase"
 
 # Dummy credit card number
 credit_card_number = "4111111111111111"
@@ -51,20 +40,6 @@ Gp9vblMeMUElCuLdbsXArC7GAaObFZwz7mr1Ho8GZaGn+wGvlGDkzjcfr6ZWMCpB
 # Dummy API endpoint
 api_endpoint = "https://api.bsp.com.pg/v1/data"
 
-# Dummy JWT
-jwt_token = "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiAiMTIzNDU2Nzg5MCIsICJuYW1lIjogIkpvaG4gRG9lIiwgImlhdCI6IDE1MTYyMzkwMjJ9.8f8gI4wH6i9mEG7-2ILWcFze_o7oB9vF9a9YX0ilZhk"
-
-# Dummy OAuth token
-oauth_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTYwNTE2MjAwLCJleHBpcmFwIjoxNTYwNTE5ODAwfQ.Wy35kNGS1u0Yx1kWZqP_S0p-ylmLJ1hqlANh2G0vdo8"
-
-# Dummy function to access sensitive data
-def access_sensitive_data():
-    response = requests.get(api_endpoint, headers={"Authorization": f"Bearer {api_key_1}"})
-    if response.status_code == 200:
-        print("Successfully accessed sensitive data")
-    else:
-        print("Failed to access sensitive data")
-
 # Dummy function to simulate email connection
 def connect_to_email():
     try:
@@ -87,22 +62,14 @@ def user_action():
         print("User action failed")
 
 # Output dummy sensitive information
-print("Dummy sensitive information:")
-print("API Key 1:", api_key_1)
-print("API Key 2:", api_key_2)
-print("Database Password:", db_password)
 print("Admin Password:", admin_password)
-print("JWT Secret:", jwt_secret)
 print("Database Connection String:", db_connection_string)
 print("Credit Card Number:", credit_card_number)
 print("Email Address:", email_address)
 print("Email Password:", email_password)
 print("SSH Private Key:", ssh_private_key)
 print("SSL Private Key:", ssl_private_key)
-print("JWT Token:", jwt_token)
-print("OAuth Token:", oauth_token)
 
 # Test the dummy functions
-access_sensitive_data()
 connect_to_email()
 user_action()
